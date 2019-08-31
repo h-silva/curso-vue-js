@@ -1,0 +1,22 @@
+<script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{titulo}} </p>
+    <p v-on:mousemove="somar()">Valor contador: {{contador}}    <span v-on:mousemove.stop> parar aqui  </span> </p>
+    <button v-on:click.prevent >Somar</button>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            titulo : "Usando vue.js",
+            contador : 0
+        },
+        methods:{
+            somar(){
+                this.contador++;
+            }
+        }
+    });
+</script>
