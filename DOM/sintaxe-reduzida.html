@@ -1,0 +1,27 @@
+<script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{titulo}} </p>
+
+
+    <button v-on:click="contador">Pressione aqui</button>
+    <button @click="contador">Pressione aqui</button>
+
+
+    <button v-bind:value="contador">Pressione aqui</button>
+    <button :value="contador">Pressione aqui</button>
+
+
+
+    <input type="text">
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            titulo : "Usando vue.js",
+            contador : 0
+        }
+    });
+</script>
