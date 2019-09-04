@@ -1,0 +1,27 @@
+q<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p v-if="logado"v>Usuário Logado: {{usuario}} </p>
+    <p v-else-if="anonimo">Navegando como anônimo</p>
+    <p v-else> Nenhum usuário logado   </p>
+
+    <button @click="logado = !logado">{{logado ? 'Sair' : 'Entrar'}}</button>
+    <input type="checkbox" v-model="anonimo">
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            usuario : "Heitor",
+            logado : false,
+            anonimo : false
+        },
+        methods:{
+            Somar(){
+                this.contador++;
+            }
+        }
+    });
+</script>
